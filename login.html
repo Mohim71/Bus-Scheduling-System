@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Book Our Bus</title>
+    <link rel="stylesheet" href="bush.css">
+</head>
+<body>
+    <div id="login-page">
+        <h1>Login</h1>
+        <form id="login-form" action="login.php" method="POST">
+            <label for="identification">ID:</label>
+            <input type="text" id="identification" name="user_id" placeholder="Enter your ID" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p id="error-message" style="color: red; display: none;">Invalid Username or Password</p>
+    </div>
+    <script src="bush.js"></script>
+</body>
+</html>

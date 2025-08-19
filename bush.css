@@ -1,0 +1,596 @@
+/* Login Page */
+#login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+#login-page h1 {
+    margin-bottom: 20px;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+#login-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#login-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login-form button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #1c6300;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#login-form button:hover {
+    background-color: #145700;
+}
+/* Schedule Section Styles */
+#schedule-body {
+    padding: 20px;
+    text-align: center;
+}
+
+#schedule-body select {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#schedule-body button {
+    padding: 10px 20px;
+    background-color: #1c6300;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#schedule-body button:hover {
+    background-color: #145700;
+}
+
+
+
+/* Main Interface */
+#main-interface {
+    display: none;
+}
+/* Add your existing styles here */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    height:100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/*,main*/
+
+main{
+    flex:1;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1c6300;
+    color: white;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+header .logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+header .brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+header .contact-info {
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero-background.jpg') no-repeat center center/cover;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 100px 20px;
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .cta-button {
+    background-color: #ffb703;
+    color: black;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.hero .cta-button:hover {
+    background-color: #faa307;
+}
+
+/* Image Stack */
+.image-stack {
+    position: absolute; /* Positioned relative to the closest parent or viewport */
+    top: 30%; /* Center vertically */
+    right: 10px; /* Align to the right */
+    transform: translateY(-50%); /* Offset to perfectly center */
+    width: 400px; /* Adjust to your preferred image width */
+    height: 300px; /* Adjust to your preferred image height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #1c6300; /* Add some styling to the images */
+    border-radius: 5px;
+}
+
+.image-stack .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+    opacity: 0; /* Start hidden */
+    z-index: 1;
+}
+
+.image-stack .image.active {
+    opacity: 1; /* Show active image */
+    z-index: 2;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1c6300;
+    color: white;
+    padding: 2px 1px;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.footer-container div {
+    flex: 1;
+    margin: 5px;
+}
+
+.footer-container h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.footer-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-container ul li,
+.footer-container p {
+    margin-bottom: 5px;
+}
+
+.footer-container a {
+    color: #ffb703;
+    text-decoration: none;
+}
+
+.footer-container a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+}
+/* Modal Popup Styling */
+.modal {
+    display: none !important;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.booking-summary-container {
+    margin-top: 30px;
+    border: 2px solid #1c6300;
+    padding: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f6fff6;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    color: #1c6300;
+}
+
+.booking-summary-container h2 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: #1c6300;
+}
+
+.booking-summary-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px;
+}
+
+.booking-summary-box {
+    border: 2px solid #1c6300;
+    padding: 10px 10px;
+    border-radius: 12px;
+    background-color: #f6fff6;
+    max-width: 700px;
+    /*width: 100%;*/
+    font-size: 1.1rem;
+    color: #1c6300;
+    box-shadow: 0 2px 10px rgba(0, 100, 0, 0.15);
+}
+
+.booking-summary-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #1c6300;
+}
+
+.rebook-button, .cancel-button {
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.rebook-button {
+    background-color: #007b1f;
+    color: #fff;
+}
+
+.rebook-button:hover {
+    background-color: #005c17;
+    transform: scale(1.05);
+}
+
+.cancel-button {
+    background-color: #e63946;
+    color: #fff;
+}
+
+.cancel-button:hover {
+    background-color: #c62828;
+    transform: scale(1.05);
+}
+
+
+.notice-dashboard {
+    /*position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 250px;
+    height: 50px;
+    overflow: hidden;
+    background-color: #fff7cc;
+    border: 2px solid #ffb703;
+    border-radius: 8px;
+    padding: 5px 10px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;*/
+    position: absolute;
+    top: 18%;              /* Match .image-stack */
+    left: 10px;            /* Opposite of .image-stack's right: 10px */
+    width: 450px;          /* Match image width */
+    height: 200px;         /* Match image height */
+    overflow: hidden;
+    background-color: #fff7cc;
+    border: 2px solid #ffb703;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 999;
+
+}
+
+.notice-track {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 30s linear infinite;
+}
+
+.notice-text {
+    font-weight: bold;
+    color: #d97706;
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+}
+
+@keyframes scroll-left {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* ===== Contact‐Manager Button Styling (mirror .rebook-button) ===== */
+.contact-button {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #28a745;    /* same green as your rebook button */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.contact-button option {
+  color: #000;    /* ensure dropdown items are readable */
+}
+
+/* ===== Contact‐Manager Dropdown Styled Like Buttons ===== */
+.contact-button {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+/* ===== “I Missed This Bus” Button Styling (match .rebook-button) ===== */
+.missed-button {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.missed-button:hover,
+.contact-button:hover {
+  opacity: 0.9;
+}
+
+
+/* ===== Navbar ===== */
+.bm-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1c6300;
+  color: white;
+  padding: 10px 20px;
+}
+.bm-logo img {
+  height: 40px;
+}
+.bm-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.bm-contact,
+.bm-user {
+  font-size: 0.9rem;
+}
+
+/* ===== Toolbar Buttons (match .rebook-button) ===== */
+.toolbar-button {
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: #007b1f;
+  color: white;
+}
+.toolbar-button:hover {
+  background-color: #005c17;
+  transform: scale(1.05);
+}
+
+/* ===== Tables ===== */
+.bm-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.bm-table th,
+.bm-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+/* ===== Sections & Forms ===== */
+.bm-form {
+  margin-bottom: 20px;
+}
+.bm-form textarea,
+.bm-form input[type="number"] {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+}
+.bm-notice-list {
+  list-style: none;
+  padding-left: 0;
+}
+.bm-notice-list li {
+  margin-bottom: 8px;
+}
+
+/* ===== Departure Overview Blocks ===== */
+.bm-overview-block {
+  border: 2px solid #1c6300;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+/* ——— Fix GUB logo size & top‐left positioning ——— */
+.bm-header {
+  position: relative;            /* allow absolute inside */
+  padding-left: 20px;            /* space for the logo */
+}
+.bm-logo {
+  position: absolute;
+  left: 20px;                    /* match header padding */
+  top: 50%;                      /* vertical center relative to header’s height */
+  transform: translateY(-50%);   /* perfect centering in that 50% line */
+}
+.bm-logo img {
+  width: 40px;                   /* smaller size like bush.css’s header .logo img */
+  height: auto;
+  border-radius: 4px;            /* mirror your other rounded images */
+}
+/* ——— Navbar list & link styling ——— */
+.bm-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+.bm-nav-list li {
+  margin: 0;
+}
+.bm-nav-list li a {
+  text-decoration: none;
+}
+
+/* We already have .toolbar-button in bus_manager.css, so those <a> will look like the other buttons */

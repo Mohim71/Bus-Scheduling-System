@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Manager Login</title>
+    <link rel="stylesheet" href="bush.css">
+</head>
+<body>
+    <div id="login-page">
+        <h1>Bus Manager Login</h1>
+        <form id="login-form" action="bus_manager_login.php" method="POST">
+            <label for="manager-id">Manager ID:</label>
+            <input type="text" id="manager-id" name="manager_id" placeholder="Enter your Manager ID" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p id="error-message" style="color: red; display: none;">Invalid Manager ID or Password</p>
+    </div>
+</body>
+</html>
