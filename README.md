@@ -1,5 +1,17 @@
 # GUB Bus Booking (PHP/MySQL)
 
+[![GitHub release](https://img.shields.io/github/v/release/Mohim71/Bus-Scheduling-System)](https://github.com/Mohim71/Bus-Scheduling-System/releases)
+[![License](https://img.shields.io/github/license/Mohim71/Bus-Scheduling-System)](https://github.com/Mohim71/Bus-Scheduling-System/blob/main/LICENSE)
+[![Made with PHP](https://img.shields.io/badge/Made%20with-PHP-777bb4.svg?logo=php&logoColor=white)](https://www.php.net/)
+
+A lightweight bus-slot booking system for students with a simple manager dashboard. Students can log in, select arrival and departure slots by route and time, and view/rebook. Managers can post scrolling notices, allocate buses to routes/time windows, and adjust bus assignments.
+
+> Source: `XIII-done/htdocs/` (the archive includes a Bitnami/XAMPP dashboard under `htdocs/dashboard/`, which is not part of the app).
+
+
+
+# GUB Bus Booking (PHP/MySQL)
+
 A lightweight bus-slot booking system for students with a simple manager dashboard. Students can log in, select arrival and departure slots by route and time, and view/rebook. Managers can post scrolling notices, allocate buses to routes/time windows, and adjust bus assignments.
 
 > Source: `XIII-done/htdocs/` (the archive includes a Bitnami/XAMPP dashboard under `htdocs/dashboard/`, which is not part of the app).
